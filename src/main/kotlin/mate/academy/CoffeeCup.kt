@@ -8,6 +8,6 @@ data class CoffeeCup(
 ) {
     // Method to simulate serving coffee
     fun serveCoffee() {
-        println("Serving a $coffeeType to $clientName. Served: $isServed")
+        print("Serving a $coffeeType to $clientName. Served: $isServed\n")
     }
 }
