@@ -27,25 +27,25 @@ class CoffeeShopTest {
     @Test
     fun `sell coffee with common client name and coffee type`() {
         coffeeShop.sellCoffee("Alice", "Espresso")
-        assertEquals("Serving a Espresso to Alice. Served: true\r\n", outputStream.toString())
+        assertEquals("Serving a Espresso to Alice. Served: true\n", outputStream.toString())
     }
 
     @Test
     fun `sell coffee with empty client name`() {
         coffeeShop.sellCoffee("", "Latte")
-        assertEquals("Serving a Latte to . Served: true\r\n", outputStream.toString())
+        assertEquals("Serving a Latte to . Served: true\n", outputStream.toString())
     }
 
     @Test
     fun `sell coffee with empty coffee type`() {
         coffeeShop.sellCoffee("Bob", "")
-        assertEquals("Serving a  to Bob. Served: true\r\n", outputStream.toString())
+        assertEquals("Serving a  to Bob. Served: true\n", outputStream.toString())
     }
 
     @Test
     fun `sell coffee with whitespace-only client name`() {
         coffeeShop.sellCoffee("   ", "Cappuccino")
-        assertEquals("Serving a Cappuccino to    . Served: true\r\n", outputStream.toString())
+        assertEquals("Serving a Cappuccino to    . Served: true\n", outputStream.toString())
     }
 
     @Test
@@ -53,7 +53,7 @@ class CoffeeShopTest {
         coffeeShop.sellCoffee("Eve", "Flat White")
         coffeeShop.sellCoffee("Eve", "Flat White")
         assertEquals(
-            "Serving a Flat White to Eve. Served: true\r\nServing a Flat White to Eve. Served: true\r\n",
+            "Serving a Flat White to Eve. Served: true\nServing a Flat White to Eve. Served: true\n",
             outputStream.toString()
         )
     }
