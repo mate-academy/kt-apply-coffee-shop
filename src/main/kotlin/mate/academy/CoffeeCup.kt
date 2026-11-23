@@ -6,7 +6,6 @@ data class CoffeeCup(
     var coffeeType: String = "Unknown",
     var isServed: Boolean = false
 ) {
-    // Method to simulate serving coffee
     fun serveCoffee() {
         println("Serving a $coffeeType to $clientName. Served: $isServed")
     }
